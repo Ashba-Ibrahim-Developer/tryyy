@@ -1183,16 +1183,21 @@ button:hover {
   width: 50vw;
 }
 
-  @media (max-width: 499px) {
- .loader span {
-        font-size: 12vw; 
-    }
-   .first {
+@media (max-width: 499px) {
+
+  /* Loader adjustments */
+  .loader span {
+    font-size: 12vw; 
+  }
+
+  /* Hide elements not needed on mobile */
+  .first {
     display: none;
   }
+
+  /* Mobile navigation */
   .mobile-nav {
     position: fixed;
-    display: block;
     top: 0;
     left: 0;
     width: 100%;
@@ -1205,7 +1210,6 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 14px 18px;
   }
 
@@ -1240,90 +1244,64 @@ button:hover {
   .mobile-menu a:hover {
     background-color: #0077b6;
   }
-  .index, .main-feedback, .co-main, .information, .events-uper, .about, .booking-top
-  {
+
+  /* Prevent horizontal scroll globally */
+  body, html, .index, .main-feedback, .co-main, .information, .events-uper, .about, .booking-top {
     overflow-x: hidden;
+    width: 100%;
   }
 
- .main {
+  /* Main container adjustments */
+  .main {
     flex-direction: column;  
     gap: 10px;
-    height: auto;        
     padding: 10px 0;
   }
+
   .sec {
     flex-direction: column;       
     gap: 15px;
     width: 100%;
     align-items: center;
   }
+
+  /* Video container fix */
   .book-viedo {
     position: relative;
-    width: 100vw;
-    height:auto;
+    width: 100%;
+    height: 50vh; /* Adjust for mobile viewport */
+    overflow: hidden;
   }
 
   .book-viedo video {
-    position: absolute;
     width: 100%;
-    min-height: 100vh;
-    height: auto;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    position: relative; /* Remove absolute */
   }
 
   .booking {
-   position: relative;
-  top: auto;
-  left: auto;
-  transform: none;
-  margin: 20px auto;
-  max-width: 92%;
-  height: auto;
-  min-height: auto;
-  overflow: visible;
+    position: relative;
+    margin: 20px auto;
+    max-width: 92%;
   }
 
   .booking h1 {
     font-size: 20px;
   }
 
-  .booking p {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  label {
+  .booking p, label, input, select, button {
     font-size: 14px;
   }
 
-  input,
-  select {
-    padding: 7px;
-    font-size: 14px;
-  }
-
-  button {
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 15px;
-  }
-  .first {
-   display: none;
-  }
-  .first h2 {
-   display: block;
-  }
   .footer {
     flex-direction: column;
-    height: auto;
     padding: 20px;
-    margin-top: 0%;
     text-align: center;
   }
 
   .footer-left img {
-    margin: 0;
     width: 90px;
   }
 
@@ -1344,54 +1322,34 @@ button:hover {
     font-size: 12px;
     padding: 8px;
   }
- 
-  
-  .video {
-    width: 100%;
-    height: 50vh; 
-    overflow: hidden;
-  }
-  .video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-    z-index: 1;
-  }
 
-  
+  /* Text overlay adjustments */
   .text {
-    
     top: 50%;
     left: 50%;
-    transform: translate(-50%);
-    z-index: 2;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
     width: 90%;
   }
+
   .text h1 {
     font-size: 24px;
-    
   }
 
-  .part2, .part3, .part5, .part6, .part7, .part8, .part9 {
-    height: auto;
-    padding: 10px;
-  }
-
-  
+  /* Cards adjustments */
   .card1, .card2, .card3, .card4 {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
     gap: 15px;
+    margin-top: 40px;
   }
+
   .card1 img, .card2 img, .card3 img, .card4 img {
     width: 90%;
     height: auto;
   }
+
   .card1 .para, .card2 .para2, .card3 .para3, .card4 .para5 {
     width: 95%;
     font-size: 16px;
@@ -1399,19 +1357,12 @@ button:hover {
     line-height: 1.5;
   }
 
-/*
-  .smallimg, .smallimg2, .smallimg3, .smallimg4, .smallimg5 {
-    width: 50px;
-    height: auto;
-    margin: 15px auto;
-    display: block;
-  }
-*/
+  /* Hide small images on mobile */
   .smallimg, .smallimg2, .smallimg3, .smallimg4, .smallimg5 {
     display: none;
   }
+
   .container-cards, .container-cards2, .container-cards3, .container-cards4 {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
@@ -1419,38 +1370,31 @@ button:hover {
     padding: 0;
   }
 
-  
   .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11, .img12 {
     width: 95%;
     height: auto;
   }
+
   .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img, .img7 img, .img8 img, .img9 img, .img10 img, .img11 img, .img12 img {
     width: 100%;
     height: auto;
   }
 
-  
   .img1 h4, .img2 h4, .img3 h4, .img4 h4, .img5 h4, .img6 h4, .img7 h4, .img8 h4, .img9 h4, .img10 h4, .img11 h4, .img12 h4 {
     font-size: 16px;
     text-align: center;
     margin: 5px 0;
   }
 
-  
   .btn {
     font-size: 16px;
     padding: 10px 20px;
   }
+
   .part6 h3 {
     font-size: 22px;
   }
 
-
-  .main-feedback {
-    padding-top: 40px;
-    justify-content: center;
-    align-items: flex-start;
-  }
 
   .review-box {
     margin-left: 0;
