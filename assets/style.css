@@ -1376,25 +1376,7 @@ button:hover {
   }
 
   .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img, .img7 img, .img8 img, .img9 img, .img10 img, .img11 img, .img12 img {
-    width: 100%;
-    height: auto;
-  }
-
-  .img1 h4, .img2 h4, .img3 h4, .img4 h4, .img5 h4, .img6 h4, .img7 h4, .img8 h4, .img9 h4, .img10 h4, .img11 h4, .img12 h4 {
-    font-size: 16px;
-    text-align: center;
-    margin: 5px 0;
-  }
-
-  .btn {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  .part6 h3 {
-    font-size: 22px;
-  }
-
+  
 
   .review-box {
     margin-left: 0;
